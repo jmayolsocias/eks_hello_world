@@ -1,0 +1,16 @@
+1. Please code a small “Hello World” web-application in a language of your choice and
+put it into a runnable docker container.
+2. Create a new repository on your favorite git platform which will hold both the
+application code from above and the infrastructure code below, as well as the CI/CD
+configuration.
+3. Please contribute terraform code to …
+a. … create an AWS K8S cluster
+b. … create an amazon ECR repository
+c. … required IAM setup
+4. Set up a CI/CD workflow (= Github Actions? Gitlab CI? …?) that
+a. … is triggered on every push to the main branch of the repository
+b. … builds the docker image & pushes it to the ECR
+c. … deploys the docker image to the EKS cluster once the image is built and
+pushed
+d. … publicly exposes the updated application in the cluster, so we can see the
+“Hello World” output.
