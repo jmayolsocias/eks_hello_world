@@ -46,4 +46,4 @@ jobs:
         IMAGE_TAG: ${{ steps.commit.outputs.short }}
       run: |
         kubectl apply -f kubernetes/hello-world-deployment.yaml
-        kubectl apply -f manifests/hello-world-service.yaml
+        kubectl apply -f kubernetes/hello-world-service.yaml
