@@ -11,7 +11,6 @@ resource "aws_eks_cluster" "hello_world" {
     ]
   }
 
-
   depends_on = [aws_iam_role_policy_attachment.hello_world-AmazonEKSClusterPolicy]
 }
 
@@ -38,8 +37,12 @@ resource "aws_eks_node_group" "nodes" {
 
   scaling_config {
     desired_size = 2
-    max_size     = 5
+    max_size     = 2
     min_size     = 1
+  }
+
+  update_config {
+    max_unavailable = 1
   }
 
   labels = {
