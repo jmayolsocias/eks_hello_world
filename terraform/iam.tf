@@ -53,7 +53,6 @@ resource "aws_iam_role_policy_attachment" "nodes-AmazonEC2ContainerRegistryReadO
 }
 
 
-
 # Access to ECR
 
 resource "aws_iam_role_policy" "eks-to-ecr-access" {
