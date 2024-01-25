@@ -15,12 +15,12 @@ resource "aws_eks_cluster" "hello_world" {
 }
 
 output "endpoint" {
-    value = aws_eks_cluster.hello_world.endpoint
-  }
+  value = aws_eks_cluster.hello_world.endpoint
+}
 
 output "kubeconfig-certificate-authority-data" {
-    value = aws_eks_cluster.hello_world.certificate_authority[0].data
-  }
+  value = aws_eks_cluster.hello_world.certificate_authority[0].data
+}
 
 resource "aws_eks_node_group" "nodes" {
   cluster_name    = aws_eks_cluster.hello_world.name
